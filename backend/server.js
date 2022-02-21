@@ -13,6 +13,9 @@ app.use(express.urlencoded({ extended: false }));
 const goalRouter = require("./routes/goalRoutes");
 app.use("/api/goals", goalRouter);
 
+const userRouter = require("./routes/userRoutes");
+app.use("/api/users", userRouter);
+
 app.use(errorHandler);
 
 app.listen(port, () => {
