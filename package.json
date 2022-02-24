@@ -1,24 +1,18 @@
 {
-  "name": "mern-stack",
+  "name": "mernapp",
+  "private": true,
   "version": "1.0.0",
   "description": "Simple full-stack MERN project",
-  "main": "sndex.js",
-  "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend"
-  },
-  "author": "Yuki2dev",
+  "main": "index.js",
+  "author": "Yuki2dev <KeysHD@users.noreply.github.com>",
   "license": "MIT",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "express-async-handler": "^1.2.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "client": "yarn workspace frontend start",
+    "server": "yarn workspace backend start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
   }
 }
