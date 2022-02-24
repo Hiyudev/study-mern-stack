@@ -2,12 +2,9 @@
   "name": "backend",
   "private": true,
   "version": "1.0.0",
-  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
-  "author": "Yuki2dev",
-  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",

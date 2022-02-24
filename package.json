@@ -1,18 +1,9 @@
 {
-  "name": "mernapp",
-  "private": true,
+  "name": "mernstack",
   "version": "1.0.0",
-  "description": "Simple full-stack MERN project",
-  "main": "index.js",
   "author": "Yuki2dev <KeysHD@users.noreply.github.com>",
   "license": "MIT",
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
   "scripts": {
-    "client": "yarn workspace frontend start",
-    "server": "yarn workspace backend start",
-    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+      "start": "concurrently \"yarn --cwd ./frontend/ start\" \"yarn --cwd ./backend/ start\""
   }
 }
