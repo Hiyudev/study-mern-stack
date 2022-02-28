@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { login, register, reset } from '../features/auth/authSlice'
+import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import { FaUser } from "react-icons/fa";
 import { useEffect } from "react";
@@ -15,7 +15,7 @@ function RegisterPage() {
     password: "",
   })
 
-  const { name, email, password } = formData;
+  const { email, password } = formData;
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
