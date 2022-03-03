@@ -7,7 +7,7 @@ import Spinner from '../components/Spinner'
 import { FaUser } from "react-icons/fa";
 import { useEffect } from "react";
 
-function RegisterPage() {
+function LoginPage() {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -80,4 +80,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default LoginPage;
