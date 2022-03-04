@@ -70,6 +70,24 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new Error("Invalid credentials");
   }
 });
+
+/**
+ * Delete user data
+ * @route DELETE /api/users/me
+ * @access Private
+ */
+const deleteUser = asyncHandler(async (req, res) => {
+  const user = await User.findByIdAndDelete(req.user.id);
+
+  if (user) {
+    res.status(200).json({
+      message: "User deleted with success",
+    });
+  } else {
+    res.status(400);
+    throw new Error("Something wrong happend!");
+  }
+});
 /**
  * Get user data
  * @route GET /api/users/me
@@ -93,4 +111,5 @@ module.exports = {
   registerUser,
   loginUser,
   getUser,
+  deleteUser,
 };

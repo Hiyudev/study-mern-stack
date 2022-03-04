@@ -8,6 +8,7 @@ import DashboardPage from "./pages/Dashboard";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import Header from "./components/Header";
+import ProfilePage from './pages/Profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<DashboardPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
           </Routes>
