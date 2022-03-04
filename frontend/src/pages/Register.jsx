@@ -77,13 +77,13 @@ function RegisterPage() {
 
           </div>
           <div className="form-group">
-            <input type="text" className="form-control" id="email" name="email" value={email} placeholder="Enter your email" onChange={onChange} />
+            <input type="text" className="form-control" id="email" name="email" value={email} placeholder="Enter your email" onChange={onChange} autoComplete="email" />
           </div>
           <div className="form-group">
             <input type="password" className="form-control" id="password1" name="password1" value={password1} placeholder="Enter your password" onChange={onChange} autoComplete="new-password" />
           </div>
           <div className="form-group">
-            <input type="password" className="form-control" id="password2" name="password2" value={password2} placeholder="Enter your password" onChange={onChange} autoComplete="new-password" />
+            <input type="password" className="form-control" id="password2" name="password2" value={password2} placeholder="Confirm your password" onChange={onChange} autoComplete="new-password" />
           </div>
           <div className="form-group">
             <button type="submit" className="btn btn-block">Submit</button>
