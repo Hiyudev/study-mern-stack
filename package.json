@@ -1,9 +1,0 @@
-{
-  "name": "mernstack",
-  "version": "1.0.0",
-  "author": "Yuki2dev <KeysHD@users.noreply.github.com>",
-  "license": "MIT",
-  "scripts": {
-      "start": "concurrently \"yarn --cwd ./frontend/ start\" \"yarn --cwd ./backend/ start\""
-  }
-}
