@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const connectDB = require("./config/db");
 require("dotenv").config();
@@ -15,6 +16,14 @@ app.use("/api/goals", goalRouter);
 
 const userRouter = require("./routes/userRoutes");
 app.use("/api/users", userRouter);
+
+if (process.env.NODE_ENV !== "dev") {
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../', 'frontend', 'build', 'index.html'));
+  })
+}
 
 app.use(errorHandler);
 
