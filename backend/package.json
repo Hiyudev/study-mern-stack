@@ -4,9 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "concurrently \\\"nodemon server.js\\\" \\\"cd ../client && yarn start\\\"",
-    "build": "cd ../frontend && npm run build",
-    "start": "nodemon server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
