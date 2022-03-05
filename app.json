@@ -1,0 +1,6 @@
+{
+  "name": "MERN Stack",
+  "description": "Case study: Simple MERN+ Stack application",
+  "repository": "https://github.com/KeysHD/study-mern-stack",
+  "keywords": ["reactjs", "expressjs", "mongodb", "nodejs", "jest", "redux"]
+}
